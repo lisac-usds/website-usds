@@ -171,6 +171,23 @@ gulp.task('lint-sass', function(){
     .pipe(sassLint.failOnError())
 });
 
+gulp.task('jekyll', function(){
+  process.stdout.write("jekyll starting");
+  const jekyll = child.spawn('jekyll', [
+    'build',
+    '--watch',
+    '--incremental',
+    '--drafts'
+  ]);
+  const jekyllLogger = (buffer) => {
+    buffer.toString()
+      .split(/\n/)
+      .forEach((message) => console.log('Jekyll: ' + message));
+  };
+  jekyll.stdout.on('data', jekyllLogger);
+  jekyll.stderr.on('data', jekyllLogger);
+});
+
 gulp.task('watch', gulp.series('uswds-build-sass', 'watch-sass'));
 
 gulp.task('default', gulp.series('watch'));
