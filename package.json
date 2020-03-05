@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "lint": "gulp lint-sass",
-    "serve": "bundle exec jekyll serve --livereload"
+    "serve": "gulp jekyll"
   },
   "repository": {
     "type": "git",
