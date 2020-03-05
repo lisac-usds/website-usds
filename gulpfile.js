@@ -23,6 +23,7 @@ var postcss       = require('gulp-postcss');
 var rename        = require('gulp-rename');
 var replace       = require('gulp-replace');
 var sass          = require('gulp-sass');
+var sassLint      = require('gulp-sass-lint');
 var sourcemaps    = require('gulp-sourcemaps');
 var uswds         = require('./node_modules/uswds-gulp/config/uswds');
 
@@ -160,6 +161,13 @@ gulp.task('update', gulp.series(
 
 gulp.task('watch-sass', function () {
   gulp.watch(`${PROJECT_SASS_SRC}/**/*.scss`, gulp.series('uswds-build-sass'));
+});
+
+gulp.task('lint-sass', function(){
+   return gulp.src(`${PROJECT_SASS_SRC}/**/*.s+(a|c)ss`)
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
 });
 
 gulp.task('watch', gulp.series('uswds-build-sass', 'watch-sass'));
