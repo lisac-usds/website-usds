@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
+    "lint": "gulp lint-sass",
     "serve": "bundle exec jekyll serve --livereload"
   },
   "repository": {
