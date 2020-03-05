@@ -166,7 +166,11 @@ gulp.task('watch-sass', function () {
 gulp.task('lint-sass', function(){
   process.stdout.write("lint-sass");
   return gulp.src(`${PROJECT_SASS_SRC}/**/*.s+(a|c)ss`)
-    .pipe(sassLint())
+    .pipe(sassLint({
+      files: {
+        ignore: 'assets/uswds-theme/*.scss'
+      }
+    }))
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
 });
