@@ -9,4 +9,4 @@ $(document).ready(function () {
     console.log(' \\____/ |_____/ |_____/ |_____/ ');
     console.log(' ');
   }
-}
+});
