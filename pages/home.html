@@ -19,6 +19,11 @@ redirect_from:
       <a class="usa-button usa-button--outline usa-button--inverse usa-button--big" href="{{ site.baseurl }}{% link pages/apply.html %}">{{ content.hero.heading_button_text }}</a>
     </div>
   </div>
+  {% if jekyll.environment == 'stage' %}
+  <div>
+   This is a development version of the site.
+  </div>
+  {% endif %}
 </div>
 
 <div class="grid-container">
