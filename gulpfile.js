@@ -13,6 +13,7 @@ USWDS SASS GULPFILE
 
 var autoprefixer  = require('autoprefixer');
 var autoprefixerOptions = require('./node_modules/uswds-gulp/config/browsers');
+var child = require('child_process');
 var cssnano       = require('cssnano');
 var gulp          = require('gulp');
 var mqpacker      = require('css-mqpacker');
