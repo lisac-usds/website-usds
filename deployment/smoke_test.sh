@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # usage: invoke from the project root directory
 
