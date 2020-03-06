@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# usage: invoke from the project root directory
+
 set -e
 
 echo "Starting tests..."
@@ -10,7 +12,7 @@ failures_count=0
 declare -a pages
 pages=("index.html" "mission.html" "apply.html" "people.html")
 for p in "${pages[@]}"; do
-    if ! test -e "../_site/$p" ; then
+    if ! test -e "./_site/$p" ; then
         echo "page $p does not exist"
         (( ++failures_count ))
     fi
