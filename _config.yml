@@ -33,6 +33,8 @@ collections:
     output: true
   reports_to_congress:
     output: true
+  medium-blogs:
+    output: true
 
 instagram_url: https://www.instagram.com/usdigitalservice
 facebook_url: https://www.facebook.com/unitedstatesdigitalservice
