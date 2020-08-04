@@ -1,0 +1,36 @@
+---
+layout: default
+title: USDS on Medium.com
+permalink: /medium-snapshot
+description: A snapshot of our content on https://medium.com/@USDigitalService
+---
+
+<div class="grid-container">
+  <section class="site-c-section">
+    <div class="site-c-section-heading">
+      <h1 class="site-c-section-heading__heading site-c-section-heading__heading--h1">{{ page.title }}</h1>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="site-c-section">
+    <div class="site-c-section__body">
+      <div class="site-c-cards margin-x-neg-2 grid-row">
+        {% for blog in site.medium-blogs reversed %}
+          <div class="tablet:grid-col-6 desktop:grid-col-4 padding-x-2 margin-bottom-4">
+            <a class="site-c-card site-c-card--linked" href="{{ site.baseurl }}/{{ blog.permalink }}">
+              <div class="site-c-card__body">
+              <span class="site-c-card__title">{{ blog.title }}</span>
+              <div class="usa-prose margin-top-2">
+                <p>{{ blog.pub_date }}</p>
+                <p class="site-c-card__affordance" aria-hidden="true">Learn more</p>
+              </div>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
