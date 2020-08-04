@@ -62,6 +62,24 @@ redirect_from:
 
   <section class="site-c-section">
     <div class="site-c-section-heading">
+      <h2 class="site-c-section-heading__heading">{{ content.medium_snapshot.heading_title }}</h2>
+      <div class="site-c-section-heading__text usa-prose">
+        {{ content.medium_snapshot.heading_text | replace: 'site.baseurl', site.baseurl | markdownify}}
+      </div>
+      <div class="site-c-section-heading__links">
+        <a class="usa-button usa-button--outline" href="https://medium.com/@USDigitalService" class="usa-button usa-button--outline">{{ content.medium_snapshot.heading_button_text }}</a>
+      </div>
+    </div>
+
+    <div class="site-c-section__body">
+      {% include medium-blog-posts.html %}
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="site-c-section">
+    <div class="site-c-section-heading">
       <h2 class="site-c-section-heading__heading">{{ content.usds_in_the_news.heading_title }}</h2>
       <div class="site-c-section-heading__text usa-prose">
         {{ content.usds_in_the_news.heading_text | replace: 'site.baseurl', site.baseurl | markdownify}}

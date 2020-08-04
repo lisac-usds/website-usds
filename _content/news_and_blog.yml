@@ -9,6 +9,12 @@ inside_look:
       Learn about the situations our teams have encountered during their time in government: the good, the bad, and the just plain bananas.
   heading_button_text: "View more on Medium"
 
+medium_snapshot:
+  heading_title: "USDS on Medium"
+  heading_text: |-
+      See a snapshot of our Medium blogs.
+  heading_button_text: "View more on Medium"
+
 usds_in_the_news:
   heading_title: "USDS in the news"
   heading_text: |-

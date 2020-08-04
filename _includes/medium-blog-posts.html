@@ -1,0 +1,10 @@
+<ul class="grid-row tablet:margin-x-neg-2 site-c-articles margin-top-neg-3">
+  {% for post in site.medium-blogs %}
+  {% unless post.hide %}
+  <li class="grid-col-12 tablet:grid-col-4 tablet:padding-x-2 site-c-article">
+    <a href="{{ post.url }}" class="site-c-article__title">{{ post.title }}</a> 
+    <br/>{{post.pub_date}}
+  </li>
+  {% endunless %}
+  {% endfor %}
+</ul>
