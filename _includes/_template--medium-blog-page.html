@@ -1,0 +1,23 @@
+<div class="grid-container">
+  <header class="padding-y-5">
+    <h1>{{ page.title }}</h1>
+  </header>
+  <hr>
+
+  <div class="grid-row tablet:flex-row-reverse padding-top-3">
+    <div class="tablet:grid-col-8 desktop:grid-col-9 margin-bottom-9 tablet:padding-right-4 site-c-project-content usa-prose">
+      {{ content }}
+    </div>
+  </div>
+
+  <hr>
+
+  <section class="site-c-section">
+    <div class="site-c-section-heading">
+      <h2 class="site-c-section-heading__heading">More of our blog posts</h2>
+      <div class="site-c-section-heading__links">
+        <a class="usa-button usa-button--outline" href="{{ site.baseurl }}{% link pages/medium-blogs.html %}" class="usa-button usa-button-outline">See all of our blog posts</a>
+      </div>
+    </div>
+  </section>
+</div>
