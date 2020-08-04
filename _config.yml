@@ -92,3 +92,4 @@ exclude:
   - CODE_OF_CONDUCT.md
   - Staticfile
   - package-lock.json
+  - scripts/generate_medium_snapshots.py
